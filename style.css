@@ -1,0 +1,17 @@
+body {
+  scroll-behavior: smooth;
+}
+
+.hero {
+  background: url('https://i.imgur.com/Rh6PXHx.jpeg') no-repeat center center;
+  background-size: cover;
+  height: 60vh;
+}
+
+.form-box {
+  transition: transform 0.2s;
+}
+
+.form-box:hover {
+  transform: translateY(-5px);
+}

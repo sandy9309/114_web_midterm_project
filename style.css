@@ -3,7 +3,7 @@ body {
 }
 
 .hero {
-  background: url('https://i.imgur.com/Rh6PXHx.jpeg') no-repeat center center;
+  background: url('back.jpeg') no-repeat center center;
   background-size: cover;
   height: 60vh;
 }
@@ -15,3 +15,4 @@ body {
 .form-box:hover {
   transform: translateY(-5px);
 }
+

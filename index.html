@@ -21,7 +21,8 @@
           <li class="nav-item"><a class="nav-link active" href="#home">首頁</a></li>
           <li class="nav-item"><a class="nav-link" href="#about">關於</a></li>
           <li class="nav-item"><a class="nav-link" href="#content">活動內容</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">表單</a></li>
+          <li class="nav-item"><a class="nav-link" href="#merch">應援物內容</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">預約及購買表單</a></li>
           <li class="nav-item"><a class="nav-link" href="#signup">會員註冊</a></li>
         </ul>
       </div>
@@ -91,7 +92,7 @@
   <!-- 應援內容物 -->
   <section id="merch" class="py-5 bg-light">
     <div class="container">
-      <h2 class="text-center mb-4 text-warning fw-bold">應援內容物展示</h2>
+      <h2 class="text-center mb-4 text-warning fw-bold">應援物內容</h2>
       <div class="row g-4">
         <div class="col-lg-4 col-md-6">
           <div class="card h-100 text-center">
@@ -128,7 +129,7 @@
   </section>
 
   <!-- 表單區 -->
-  <section id="contact" class="py-5 bg-light">
+  <section id="contact" class="py-5 bg-white">
     <div class="container">
       <h2 class="text-center mb-5 text-primary fw-bold">展覽預約與應援物購買登記</h2>
 
@@ -144,15 +145,15 @@
               </div>
               <div class="mb-3">
                 <label class="form-label">連絡電話</label>
-                <input type="tel" class="form-control" id="reservePhone" placeholder="09xxxxxxxx" pattern="^09\\d{8}$" required>
+                <input type="text" class="form-control" id="reservePhone"  pattern="^09\d{8}$" required>
               </div>
               <div class="mb-3">
                 <label class="form-label">Email</label>
-                <input type="email" class="form-control" id="reserveEmail" placeholder="example@gmail.com" pattern="^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$" required>
+                <input type="email" class="form-control" id="reserveEmail" pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$" required>
               </div>
               <div class="mb-3">
-                <label class="form-label">主旨</label>
-                <input type="text" class="form-control" required>
+                <label class="form-label">預約人數</label>
+                <input type="number" class="form-control" id="reservePeople" min="1" value="1" required>
               </div>
               <div class="mb-3">
                 <label class="form-label">備註</label>
@@ -178,11 +179,11 @@
               </div>
               <div class="mb-3">
                 <label class="form-label">連絡電話</label>
-                <input type="text" class="form-control" id="orderPhone" pattern="^09\\d{8}$" placeholder="09xxxxxxxx" required>
+                <input type="text" class="form-control" id="orderPhone" pattern="^09\d{8}$" required>
               </div>
               <div class="mb-3">
                 <label class="form-label">Email</label>
-                <input type="email" class="form-control" id="orderEmail" pattern="^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$" required>
+                <input type="email" class="form-control" id="orderEmail" pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$" required>
               </div>
               <div class="mb-3">
                 <label class="form-label">訂購份數</label>
@@ -219,11 +220,11 @@
               </div>
               <div class="mb-3">
                 <label class="form-label">連絡電話</label>
-                <input type="tel" class="form-control" id="signupPhone" placeholder="09xxxxxxxx" pattern="^09\\d{8}$" required>
+                <input type="text" class="form-control" id="signupPhone"  pattern="^09\d{8}$" required>
               </div>
               <div class="mb-3">
                 <label class="form-label">Email</label>
-                <input type="email" class="form-control" id="signupEmail" pattern="^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$" required>
+                <input type="email" class="form-control" id="signupEmail" pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$" required>
               </div>
               <div class="mb-3">
                 <label class="form-label">密碼</label>
@@ -250,9 +251,9 @@
   <footer class="bg-dark text-light text-center py-3">
     <p>© 2025 FollowOurStar | All rights reserved.</p>
     <div class="social-links">
-      <a href="#" class="text-light me-3">Instagram</a>
-      <a href="#" class="text-light me-3">Twitter</a>
-      <a href="#" class="text-light">Facebook</a>
+      <a href="https://www.instagram.com/saythename_17?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="text-light me-3" target="_blank">Instagram</a>
+      <a href="https://x.com/pledis_17" class="text-light me-3" target="_blank">Twitter</a>
+      <a href="https://www.youtube.com/@pledis17" class="text-light" target="_blank">Youtube</a>
     </div>
   </footer>
 

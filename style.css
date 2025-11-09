@@ -15,4 +15,33 @@ body {
 .form-box:hover {
   transform: translateY(-5px);
 }
-
+#detailsBtn1 {
+    /* 設定背景顏色 */
+    background-color: #F7CAC9; 
+    
+    /* 設定文字顏色 */
+    color: white; 
+    
+    /* 移除或修改邊框 */
+    border: 1px solid #F7CAC9;
+}
+#detailsBtn2 {
+    /* 設定背景顏色 */
+    background-color:#92A8D1; 
+    
+    /* 設定文字顏色 */
+    color: white; 
+    
+    /* 移除或修改邊框 */
+    border: 1px solid #92A8D1;
+}
+#detailsBtn3 {
+    /* 設定背景顏色 */
+    background-color: #F7CAC9; 
+    
+    /* 設定文字顏色 */
+    color: white; 
+    
+    /* 移除或修改邊框 */
+    border: 1px solid #F7CAC9;
+}

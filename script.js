@@ -9,7 +9,30 @@ function checkValidity(input, patternMessage) {
   }
   return input.reportValidity() ? true : false;
 }
-
+//應援禮1的詳情介紹
+document.addEventListener('DOMContentLoaded', function() {
+  const detailsButton = document.getElementById('detailsBtn1');
+  detailsButton.addEventListener('click', function() {
+    const detailText = "以SEVENTEEN的「酒精男團」形象為靈感，刻印成員專屬動物形象，舉起杯，一起慶祝十週年吧!";
+    alert(detailText);
+  });
+});
+//應援禮2的詳情介紹
+document.addEventListener('DOMContentLoaded', function() {
+  const detailsButton = document.getElementById('detailsBtn2');
+  detailsButton.addEventListener('click', function() {
+    const detailText = "印有SVT logo的鍵盤吊飾，按壓即有解壓效果，每一次按下鍵盤，就像與SEVENTEEN一起釋放壓力。";
+    alert(detailText);
+  });
+});
+//應援禮3的詳情介紹
+document.addEventListener('DOMContentLoaded', function() {
+  const detailsButton = document.getElementById('detailsBtn3');
+  detailsButton.addEventListener('click', function() {
+    const detailText = "收錄成員曾說過的話與歌詞，短短一句，在需要的時刻也能帶來溫暖與力量。";
+    alert(detailText);
+  });
+});
 // 展覽預約表單
 const reserveForm = document.getElementById('reserveForm');
 reserveForm.addEventListener('submit', e => {
@@ -33,7 +56,7 @@ reserveForm.addEventListener('submit', e => {
 const orderForm = document.getElementById('orderForm');
 const quantityInput = document.getElementById('quantity');
 const totalInput = document.getElementById('total');
-const pricePerItem = 300; // 單價
+const pricePerItem = 250; // 單價
 quantityInput.addEventListener('input', () => {
   const q = parseInt(quantityInput.value) || 0;
   totalInput.value = `$${q * pricePerItem}`;

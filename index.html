@@ -42,10 +42,10 @@
     <div class="container">
       <div class="row align-items-center">
         <div class="col-md-4 text-center">
-          <img src="logo.jpg" class="img-fluid rounded-circle" alt="頭貼">
+          <img src="assets/logo.jpg" class="img-fluid rounded-circle" alt="頭貼">
         </div>
         <div class="col-md-8">
-          <h2 class="fw-bold text">關於本次活動</h2>
+          <h2 class="fw-bold">關於本次活動</h2>
           <p class="fs-5 text-muted">十年，是十三顆星與無數光之間的約定。<br>
             從〈Adore U〉到今天，每一次舞台、每一段旋律、每一刻微笑，<br>
             都構成了屬於 SEVENTEEN 與 CARAT 的回憶。<br><br>
@@ -66,11 +66,11 @@
   <!-- 活動內容 -->
   <section id="content" class="py-5 bg-white">
     <div class="container">
-      <h2 class="text-center mb-4 text fw-bold">活動內容</h2>
+      <h2 class="text-center mb-4 fw-bold">活動內容</h2>
       <div class="row">
         <div class="col-md-4 mb-4">
           <div class="card h-100 text-center">
-            <img src="活動1.PNG" class="card-img-top" alt="活動1">
+            <img src="assets/活動1.PNG" class="card-img-top" alt="活動1">
             <div class="card-body">
               <h5 class="card-title">十年時光牆</h5>
               <p class="card-text">透過歷年照片與專輯，回顧十年足跡，一起感受他們成長的軌跡與珍貴瞬間。</p>
@@ -79,7 +79,7 @@
         </div>
         <div class="col-md-4 mb-4">
           <div class="card h-100 text-center">
-            <img src="活動2.PNG" class="card-img-top" alt="活動2">
+            <img src="assets/活動2.PNG" class="card-img-top" alt="活動2">
             <div class="card-body">
               <h5 class="card-title">沉浸舞台</h5>
               <p class="card-text">換上同款訓練背心，一起進入表演現場！跟隨音樂節拍，成為他們舞台的一部分。</p>
@@ -88,7 +88,7 @@
         </div>
         <div class="col-md-4 mb-4">
           <div class="card h-100 text-center">
-            <img src="活動4.PNG" class="card-img-top" alt="活動3">
+            <img src="assets/活動4.PNG" class="card-img-top" alt="活動3">
             <div class="card-body">
               <h5 class="card-title">To SEVENTEEN</h5>
               <p class="card-text">留下你想對他們說的話，這些文字會化成禮物，送到他們手中。</p>
@@ -102,11 +102,11 @@
   <!-- 應援內容物 -->
   <section id="merch" class="py-5 bg-light">
     <div class="container">
-      <h2 class="text-center mb-4 text fw-bold">應援物內容</h2>
+      <h2 class="text-center mb-4 fw-bold">應援物內容</h2>
       <div class="row g-4">
         <div class="col-lg-4 col-md-6">
           <div class="card h-100 text-center">
-            <img src="應援1.PNG" class="card-img-top" alt="應援商品 1">
+            <img src="assets/應援1.PNG" class="card-img-top" alt="應援商品 1">
             <div class="card-body">
               <h5 class="card-title">Cheers to SEVENTEEN</h5>
               <p class="card-text">每份一入，隨機發放</p>
@@ -116,7 +116,7 @@
         </div>
         <div class="col-lg-4 col-md-6">
           <div class="card h-100 text-center">
-            <img src="應援2.PNG" class="card-img-top" alt="應援商品 2">
+            <img src="assets/應援2.PNG" class="card-img-top" alt="應援商品 2">
             <div class="card-body">
               <h5 class="card-title">鍵盤吊飾</h5>
               <p class="card-text">黑/白 兩色隨機發放</p>
@@ -126,7 +126,7 @@
         </div>
         <div class="col-lg-4 col-md-6">
           <div class="card h-100 text-center">
-            <img src="應援3.PNG" class="card-img-top" alt="應援商品 3">
+            <img src="assets/應援3.PNG" class="card-img-top" alt="應援商品 3">
             <div class="card-body">
               <h5 class="card-title">迷你明信片</h5>
               <p class="card-text">50款隨機發放，一份5張</p>
@@ -141,33 +141,33 @@
   <!-- 表單區 -->
   <section id="contact" class="py-5 bg-white">
     <div class="container">
-      <h2 class="text-center mb-5 text fw-bold">展覽預約與應援物購買登記</h2>
+      <h2 class="text-center mb-5 fw-bold">展覽預約與應援物購買登記</h2>
 
       <div class="row g-4">
         <!-- 展覽預約 -->
         <div class="col-md-6">
           <div class="p-4 rounded-4 bg-white shadow form-box">
-            <h4 class="text-center text fw-bold mb-3">展覽預約表單</h4>
-            <form id="reserveForm">
+            <h4 class="text-center fw-bold mb-3">展覽預約表單</h4>
+            <form id="reserveForm" novalidate>
               <div class="mb-3">
                 <label class="form-label">姓名</label>
-                <input type="text" class="form-control" required>
+                <input type="text" class="form-control" name="reserveName" required>
               </div>
               <div class="mb-3">
                 <label class="form-label">連絡電話</label>
-                <input type="text" class="form-control" id="reservePhone"  pattern="^09\d{8}$" required>
+                <input type="text" class="form-control" id="reservePhone" name="reservePhone" pattern="^09\d{8}$" required>
               </div>
               <div class="mb-3">
                 <label class="form-label">Email</label>
-                <input type="email" class="form-control" id="reserveEmail" pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$" required>
+                <input type="text" class="form-control" id="reserveEmail" name="reserveEmail" pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$" required>
               </div>
               <div class="mb-3">
                 <label class="form-label">預約人數</label>
-                <input type="number" class="form-control" id="reservePeople" min="1" value="1" required>
+                <input type="number" class="form-control" id="reservePeople" name="reservePeople" min="1" value="1" required>
               </div>
               <div class="mb-3">
                 <label class="form-label">備註</label>
-                <textarea class="form-control" rows="3"></textarea>
+                <textarea class="form-control" rows="3" name="reserveNote"></textarea>
               </div>
               <div class="form-check mb-3">
                 <input type="checkbox" class="form-check-input" id="reserveCheck" required>
@@ -181,27 +181,27 @@
         <!-- 應援物購買登記 -->
         <div class="col-md-6">
           <div class="p-4 rounded-4 bg-white shadow form-box">
-            <h4 class="text-center text fw-bold mb-3">應援物購買登記</h4>
-            <form id="orderForm">
+            <h4 class="text-center fw-bold mb-3">應援物購買登記</h4>
+            <form id="orderForm" novalidate>
               <div class="mb-3">
                 <label class="form-label">訂購人姓名</label>
-                <input type="text" class="form-control" required>
+                <input type="text" class="form-control" name="orderName" required>
               </div>
               <div class="mb-3">
                 <label class="form-label">連絡電話</label>
-                <input type="text" class="form-control" id="orderPhone" pattern="^09\d{8}$" required>
+                <input type="text" class="form-control" id="orderPhone" name="orderPhone" pattern="^09\d{8}$" required>
               </div>
               <div class="mb-3">
                 <label class="form-label">Email</label>
-                <input type="email" class="form-control" id="orderEmail" pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$" required>
+                <input type="text" class="form-control" id="orderEmail" name="orderEmail" pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$" required>
               </div>
               <div class="mb-3">
                 <label class="form-label">訂購份數</label>
-                <input type="number" class="form-control" id="quantity" min="1" value="1" required>
+                <input type="number" class="form-control" id="quantity" name="quantity" min="1" value="1" required>
               </div>
               <div class="mb-3">
                 <label class="form-label">總金額</label>
-                <input type="text" class="form-control" id="total" value="$250" readonly>
+                <input type="text" class="form-control" id="total" name="totalAmount" value="$250" readonly>
               </div>
               <div class="form-check mb-3">
                 <input type="checkbox" class="form-check-input" id="orderCheck" required>
@@ -218,32 +218,32 @@
   <!-- 會員註冊 -->
   <section id="signup" class="py-5 bg-light">
     <div class="container">
-      <h2 class="text-center mb-4 text fw-bold">如果想知道後續資訊歡迎加入我們</h2>
+      <h2 class="text-center mb-4 fw-bold">如果想知道後續資訊歡迎加入我們</h2>
       <div class="row justify-content-center">
         <div class="col-md-6">
           <div class="p-4 rounded-4 bg-white shadow form-box">
-            <h4 class="text-center text fw-bold mb-3">註冊會員</h4>
-            <form id="signupForm">
+            <h4 class="text-center fw-bold mb-3">註冊會員</h4>
+            <form id="signupForm" novalidate>
               <div class="mb-3">
                 <label class="form-label">會員姓名</label>
-                <input type="text" class="form-control" required>
+                <input type="text" class="form-control" name="signupName" required>
               </div>
               <div class="mb-3">
                 <label class="form-label">連絡電話</label>
-                <input type="text" class="form-control" id="signupPhone"  pattern="^09\d{8}$" required>
+                <input type="text" class="form-control" id="signupPhone" name="signupPhone" pattern="^09\d{8}$" required>
               </div>
               <div class="mb-3">
                 <label class="form-label">Email</label>
-                <input type="email" class="form-control" id="signupEmail" pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$" required>
+                <input type="text" class="form-control" id="signupEmail" name="signupEmail" pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$" required>
               </div>
               <div class="mb-3">
                 <label class="form-label">密碼</label>
-                <input type="password" class="form-control" id="signupPassword" required>
+                <input type="password" class="form-control" id="signupPassword" name="signupPassword" required>
                 <div id="passwordStrength" class="form-text">密碼強度: </div>
               </div>
               <div class="mb-3">
                 <label class="form-label">確認密碼</label>
-                <input type="password" class="form-control" id="signupConfirmPassword" required>
+                <input type="password" class="form-control" id="signupConfirmPassword" name="signupConfirmPassword" required>
               </div>
               <div class="form-check mb-3">
                 <input type="checkbox" class="form-check-input" id="signupCheck" required>
@@ -259,7 +259,7 @@
 
   <!-- 頁尾 -->
   <footer class="bg-dark text-light text-center py-3">
-    <p>© 2025 FollowOurStar | All rights reserved.</p>
+    <p>&copy; 2025 FollowOurStar | All rights reserved.</p>
     <div class="social-links">
       <a href="https://www.instagram.com/saythename_17?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="text-light me-3" target="_blank">Instagram</a>
       <a href="https://x.com/pledis_17" class="text-light me-3" target="_blank">Twitter</a>

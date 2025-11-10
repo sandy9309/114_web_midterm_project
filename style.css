@@ -3,7 +3,7 @@ body {
 }
 
 .hero {
-  background: url('back.jpeg') no-repeat center center;
+  background: url('assets/back.jpeg') no-repeat center center;
   background-size: cover;
   height: 60vh;
 }
@@ -17,13 +17,13 @@ body {
 }
 #detailsBtn1 {
     /* 設定背景顏色 */
-    background-color: #F7CAC9; 
+    background-color: #92A8D1; 
     
     /* 設定文字顏色 */
     color: white; 
     
     /* 移除或修改邊框 */
-    border: 1px solid #F7CAC9;
+    border: 1px solid  #92A8D1;
 }
 #detailsBtn2 {
     /* 設定背景顏色 */
@@ -37,11 +37,11 @@ body {
 }
 #detailsBtn3 {
     /* 設定背景顏色 */
-    background-color: #F7CAC9; 
+    background-color:  #92A8D1; 
     
     /* 設定文字顏色 */
     color: white; 
     
     /* 移除或修改邊框 */
-    border: 1px solid #F7CAC9;
+    border: 1px solid  #92A8D1;
 }

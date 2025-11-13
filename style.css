@@ -45,3 +45,33 @@ body {
     /* 移除或修改邊框 */
     border: 1px solid  #92A8D1;
 }
+#showSignupBtn{
+    /* 設定背景顏色 */
+    background-color:  #92A8D1; 
+    
+    /* 設定文字顏色 */
+    color: white; 
+    
+    /* 移除或修改邊框 */
+    border: 1px solid  #92A8D1;
+}
+#showLoginBtn{
+  /* 設定背景顏色 */
+    background-color:  #F7CAC9; 
+    
+    /* 設定文字顏色 */
+    color: white; 
+    
+    /* 移除或修改邊框 */
+    border: 1px solid  #F7CAC9;
+}
+#logoutBtn{
+  /* 設定背景顏色 */
+    background-color:   #92A8D1; 
+    
+    /* 設定文字顏色 */
+    color: white; 
+    
+    /* 移除或修改邊框 */
+    border: 1px solid   #92A8D1;
+}

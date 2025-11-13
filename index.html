@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
@@ -151,19 +152,23 @@
             <form id="reserveForm" novalidate>
               <div class="mb-3">
                 <label class="form-label">姓名</label>
-                <input type="text" class="form-control" name="reserveName" required>
+                <input type="text" class="form-control" id="reserveName" name="reserveName" required>
+                <div class="invalid-feedback" id="reserveNameError"></div>
               </div>
               <div class="mb-3">
                 <label class="form-label">連絡電話</label>
                 <input type="text" class="form-control" id="reservePhone" name="reservePhone" pattern="^09\d{8}$" required>
+                <div class="invalid-feedback" id="reservePhoneError"></div>
               </div>
               <div class="mb-3">
                 <label class="form-label">Email</label>
                 <input type="text" class="form-control" id="reserveEmail" name="reserveEmail" pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$" required>
+                <div class="invalid-feedback" id="reserveEmailError"></div>
               </div>
               <div class="mb-3">
                 <label class="form-label">預約人數</label>
                 <input type="number" class="form-control" id="reservePeople" name="reservePeople" min="1" value="1" required>
+                <div class="invalid-feedback" id="reservePeopleError"></div>
               </div>
               <div class="mb-3">
                 <label class="form-label">備註</label>
@@ -185,19 +190,23 @@
             <form id="orderForm" novalidate>
               <div class="mb-3">
                 <label class="form-label">訂購人姓名</label>
-                <input type="text" class="form-control" name="orderName" required>
+                <input type="text" class="form-control" id="orderName" name="orderName" required>
+                <div class="invalid-feedback" id="orderNameError"></div>
               </div>
               <div class="mb-3">
                 <label class="form-label">連絡電話</label>
                 <input type="text" class="form-control" id="orderPhone" name="orderPhone" pattern="^09\d{8}$" required>
+                <div class="invalid-feedback" id="orderPhoneError"></div>
               </div>
               <div class="mb-3">
                 <label class="form-label">Email</label>
                 <input type="text" class="form-control" id="orderEmail" name="orderEmail" pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$" required>
+                <div class="invalid-feedback" id="orderEmailError"></div>
               </div>
               <div class="mb-3">
                 <label class="form-label">訂購份數</label>
                 <input type="number" class="form-control" id="quantity" name="quantity" min="1" value="1" required>
+                <div class="invalid-feedback" id="quantityError"></div>
               </div>
               <div class="mb-3">
                 <label class="form-label">總金額</label>
@@ -215,42 +224,79 @@
     </div>
   </section>
 
-  <!-- 會員註冊 -->
+  <!-- 會員註冊/登入 -->
   <section id="signup" class="py-5 bg-light">
     <div class="container">
       <h2 class="text-center mb-4 fw-bold">如果想知道後續資訊歡迎加入我們</h2>
       <div class="row justify-content-center">
         <div class="col-md-6">
           <div class="p-4 rounded-4 bg-white shadow form-box">
-            <h4 class="text-center fw-bold mb-3">註冊會員</h4>
-            <form id="signupForm" novalidate>
-              <div class="mb-3">
-                <label class="form-label">會員姓名</label>
-                <input type="text" class="form-control" name="signupName" required>
+            
+            <!-- 登入成功訊息 -->
+            <div id="loggedInMessage" style="display:none;">
+              <p class="text-center fs-5">歡迎回來，<span id="loggedInUser"></span>！</p>
+              <button id="logoutBtn" class="btn  w-100">登出</button>
+            </div>
+
+            <!-- 註冊/登入內容 -->
+            <div id="authContent">
+              <div class="d-flex justify-content-center mb-3">
+                <button id="showSignupBtn" class="btn btn-sm btn-secondary me-2">註冊</button>
+                <button id="showLoginBtn" class="btn btn-sm btn-outline-secondary">登入</button>
               </div>
-              <div class="mb-3">
-                <label class="form-label">連絡電話</label>
-                <input type="text" class="form-control" id="signupPhone" name="signupPhone" pattern="^09\d{8}$" required>
-              </div>
-              <div class="mb-3">
-                <label class="form-label">Email</label>
-                <input type="text" class="form-control" id="signupEmail" name="signupEmail" pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$" required>
-              </div>
-              <div class="mb-3">
-                <label class="form-label">密碼</label>
-                <input type="password" class="form-control" id="signupPassword" name="signupPassword" required>
-                <div id="passwordStrength" class="form-text">密碼強度: </div>
-              </div>
-              <div class="mb-3">
-                <label class="form-label">確認密碼</label>
-                <input type="password" class="form-control" id="signupConfirmPassword" name="signupConfirmPassword" required>
-              </div>
-              <div class="form-check mb-3">
-                <input type="checkbox" class="form-check-input" id="signupCheck" required>
-                <label class="form-check-label" for="signupCheck">我確認註冊資訊正確</label>
-              </div>
-              <button type="submit" class="btn btn-secondary w-100">送出</button>
-            </form>
+
+              <h4 class="text-center fw-bold mb-3" id="authTitle">註冊會員</h4>
+
+              <!-- 註冊表單 -->
+              <form id="signupForm" novalidate>
+                <div class="mb-3">
+                  <label class="form-label">會員姓名</label>
+                  <input type="text" class="form-control" id="signupName" name="signupName" required>
+                  <div class="invalid-feedback" id="signupNameError"></div>
+                </div>
+                <div class="mb-3">
+                  <label class="form-label">連絡電話</label>
+                  <input type="text" class="form-control" id="signupPhone" name="signupPhone" pattern="^09\d{8}$" required>
+                  <div class="invalid-feedback" id="signupPhoneError"></div>
+                </div>
+                <div class="mb-3">
+                  <label class="form-label">Email</label>
+                  <input type="text" class="form-control" id="signupEmail" name="signupEmail" pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$" required>
+                  <div class="invalid-feedback" id="signupEmailError"></div>
+                </div>
+                <div class="mb-3">
+                  <label class="form-label">密碼</label>
+                  <input type="password" class="form-control" id="signupPassword" name="signupPassword" required>
+                  <div class="invalid-feedback" id="signupPasswordError"></div>
+                  <div id="passwordStrength" class="form-text">密碼強度: </div>
+                </div>
+                <div class="mb-3">
+                  <label class="form-label">確認密碼</label>
+                  <input type="password" class="form-control" id="signupConfirmPassword" name="signupConfirmPassword" required>
+                  <div class="invalid-feedback" id="signupConfirmPasswordError"></div>
+                </div>
+                <div class="form-check mb-3">
+                  <input type="checkbox" class="form-check-input" id="signupCheck" required>
+                  <label class="form-check-label" for="signupCheck">我確認註冊資訊正確</label>
+                </div>
+                <button type="submit" class="btn btn-secondary w-100">送出</button>
+              </form>
+
+              <!-- 登入表單 -->
+              <form id="loginForm" novalidate style="display:none;">
+                <div class="mb-3">
+                  <label class="form-label">Email</label>
+                  <input type="text" class="form-control" id="loginEmail" name="loginEmail" required>
+                  <div class="invalid-feedback" id="loginEmailError"></div>
+                </div>
+                <div class="mb-3">
+                  <label class="form-label">密碼</label>
+                  <input type="password" class="form-control" id="loginPassword" name="loginPassword" required>
+                  <div class="invalid-feedback" id="loginPasswordError"></div>
+                </div>
+                <button type="submit" class="btn btn-secondary w-100">登入</button>
+              </form>
+            </div>
           </div>
         </div>
       </div>
@@ -259,7 +305,7 @@
 
   <!-- 頁尾 -->
   <footer class="bg-dark text-light text-center py-3">
-    <p>&copy; 2025 FollowOurStar | All rights reserved.</p>
+    <p>© 2025 FollowOurStar | All rights reserved.</p>
     <div class="social-links">
       <a href="https://www.instagram.com/saythename_17?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="text-light me-3" target="_blank">Instagram</a>
       <a href="https://x.com/pledis_17" class="text-light me-3" target="_blank">Twitter</a>

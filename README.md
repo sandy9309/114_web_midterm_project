@@ -15,6 +15,7 @@ HTML5、CSS3、Bootstrap 5、JavaScript 、LocalStorage<br>
 4. 資料暫存：使用 localStorage 記住展覽預約表單內容，防止資料遺失。
 5. 響應式設計 (RWD)：採用 Bootstrap 5 確保網頁在不同裝置上皆能良好顯示。
 6. 視覺優化：實現平滑滾動、表單區塊 Hover 動畫等效果。<br>
+<br>
 --GitHub Pages 網址
 https://sandy9309.github.io/114_web_midterm_project/
 
